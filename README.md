@@ -1,5 +1,5 @@
-# ⚡ Advanced XExe Builder v 1.0 [MinGW64 Edition]
-
+# ⚡ Advanced XExe Builder v 1.0 
+## MinGW64 Edition
 ![Version](https://img.shields.io/badge/Version-1.0_Pro_Edition-green)
 ![Engine](https://img.shields.io/badge/Engine-MinGW64_%7C_C%2B%2B_Native-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows_10/11-lightgrey)
