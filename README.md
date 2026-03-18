@@ -1,4 +1,4 @@
-# ⚡ Advanced XExeBatRegPs1 Builder v 1.0 
+# ⚡ Advanced XExe .Bat .Reg .Ps1 Builder v 1.0 
 ## MinGW64 Edition
 ![Version](https://img.shields.io/badge/Version-1.0_Pro_Edition-green)
 ![Engine](https://img.shields.io/badge/Engine-MinGW64_%7C_C%2B%2B_Native-blue)
