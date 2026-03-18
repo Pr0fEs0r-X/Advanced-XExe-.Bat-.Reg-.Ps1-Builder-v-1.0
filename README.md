@@ -12,6 +12,7 @@ Herramienta profesional diseñada para convertir scripts de automatización (BAT
 - [Propósito del Programa](#-propósito-del-programa)
 - [Características Principales](#-características-principales)
 - [Requisitos del Sistema](#-requisitos-del-sistema)
+- [Compilar desde el Código Fuente (Python a EXE)](#-compilar-desde-el-código-fuente-python-a-exe)
 - [Cómo Funciona (Técnico)](#-cómo-funciona-técnico)
 - [Autor y Empresa](#-autor-y-empresa)
 
@@ -64,6 +65,43 @@ Editor inteligente con un panel lateral que filtra y sugiere comandos según el 
 
 ---
 
+## 🐍 Compilar desde el Código Fuente (Python a EXE)
+
+Si has descargado el código fuente (`builder.py`) y deseas generar tu propio ejecutable de la herramienta, sigue estos pasos utilizando **PyInstaller**.
+
+### Paso 1: Instalar PyInstaller
+Abre tu terminal (Símbolo del sistema o PowerShell) y ejecuta:
+
+```bash
+pip install pyinstaller
+```
+
+### Paso 2: Navegar a la carpeta del proyecto
+Usa el comando `cd` para situarte en la carpeta donde guardaste el script.
+
+```bash
+cd "ruta\de\tu\carpeta"
+```
+
+### Paso 3: Ejecutar el comando de compilación
+Ejecuta el siguiente comando para crear un ejecutable limpio, sin consola y en un solo archivo:
+
+```bash
+pyinstaller --noconsole --onefile --name "AdvancedBuilder" --icon=icono.ico builder.py
+```
+
+*   `--noconsole`: Oculta la terminal negra de fondo.
+*   `--onefile`: Empaqueta todo en un único `.exe`.
+*   `--name`: Nombre personalizado del archivo de salida.
+*   `--icon`: (Opcional) Ruta a un icono `.ico` para tu herramienta.
+
+### Paso 4: Recoger el Ejecutable
+Una vez terminado, encontrarás tu ejecutable dentro de la nueva carpeta `dist/` generada en tu directorio.
+
+> **Nota Importante sobre Distribución:** El `.exe` generado es solo la interfaz. Para que funcione en otros ordenadores, estos deben tener **MinGW64** instalado, o bien debes distribuir el archivo `AdvancedBuilder.exe` junto con la carpeta `bin` de MinGW en el mismo directorio (modo portable).
+
+---
+
 ## 🛠️ Cómo Funciona (Técnico)
 
 El programa actúa como un "Stub Builder" inteligente:
@@ -75,6 +113,7 @@ El programa actúa como un "Stub Builder" inteligente:
 3.  **Generación de Código:** Escribe dinámicamente un archivo `main.cpp` que contiene las funciones de desencriptado y el payload incrustado.
 4.  **Compilación:** Invoca al compilador `g++` para transformar el código C++ en un ejecutable final (`exe`), enlazando estáticamente las librerías para evitar dependencias.
 
+---
 ---
 
 ## 👤 Autor y Empresa
